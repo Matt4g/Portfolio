@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>The Three-D Men</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="stylesheet" href="css/style.css">
+        <script>
+            function ConfirmVirus()  {
+                 var result = confirm("NO SERIOUSLY THIS IS A VIRUS\nCONFIRM AT YOUR OWN RISK?");
+                 if(result)  {
+                     alert("Good luck...");
+                     window.open('projects/virus/killme.html','_blank')
+                 } else {
+                     alert("Good Choice");
+                 }
+            }
+         </script>
+    </head>
+
+    <body>
+        <div id="header">
+            <div id="header-content">
+                <h1 class="title">Matt Gladura Portfolio</h1>
+            </div>
+        </div>
+        <div id="navigation">
+            <div id="nav-container">
+                <button class="nav-btn" onclick="window.open('index.html')">Home</button>
+                <button class="nav-btn" onclick="window.open('https://shaynewesbite.web.app', '_blank')">The Frog Knows</button>
+                <button class="nav-btn" onclick="window.open('https://mgcapstone.com', '_blank')">Capstone Tetris</button>
+                <button class="nav-btn" onclick="ConfirmVirus()">A Genuine Virus</button><!-- When You click it, it should warn you that Im not joking-->
+                <button class="nav-btn" onclick="window.open('')">My Tetris Clones</button>
+            </div>
+        </div>
+    </body>
+</html>
+
+
