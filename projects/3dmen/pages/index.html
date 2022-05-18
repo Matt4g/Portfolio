@@ -1,0 +1,75 @@
+<html>
+    <head>
+      
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $(".pageheader").load("../header.html");
+            });
+        </script>
+        
+        <title>The Three-D Men</title>
+        <link rel="stylesheet" href="../scripts/style.css">       
+    </head>
+    <body>
+        <div id="container">
+            <div class="pageheader"></div>
+            
+            <div class="main">
+                <div class="container">
+  
+                    <div style="text-align:center;">
+                      <h2>Order Form</h2>
+                      <p id="p">We'll let you know when your file starts printing</p>
+                    </div>
+
+                    <div class="row">
+                      <div class="column">
+              
+                        <form id="order-form" method="POST" 
+                        action="https://sheetdb.io/api/v1/ewc18emke5zyi">
+                        <div style="text-align: center;">
+                          <label > <a href="https://www.dropbox.com/basic" target="_blank" id="drop"> Create a free Dropbox account</a></label><br>
+                          <label >Upload the files there, then copy the sharing link and paste it below:</label>
+                        </div>
+                          <input type="text" name="data[File]" placeholder="Dropbox Link..." required>
+                         
+                          <br>
+                          <label>Name</label>
+                          <input type="text" name="data[Name]" placeholder="Name..." required>
+                          <label>Email</label>
+                          <input type="email" name="data[Email]" placeholder="Email..." required>
+                          <label>Phone</label>
+                          <input type="tel" name="data[Phone]" placeholder="Phone #..." required>
+                          <label>Description</label>
+                          <textarea id='text' name="data[Desc]" placeholder="Text here..."></textarea>
+                          <button type="submit" id="back">Send</button>
+                      </form>
+                        <script>
+         var form = document.getElementById('order-form');
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    fetch(form.action, {
+        method : "POST",
+        body: new FormData(document.getElementById("order-form")),
+    }).then(
+        response => response.json()
+    ).then((html) => {
+      // you can put any JS code here
+     window.location.href = 'order.html'
+    });
+  });
+        </script>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </body>
+</html>
