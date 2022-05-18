@@ -71,7 +71,7 @@ body{
     width: 400px;
   }
 
-  h1{
+  #h1{
     padding-top: 80px;
     text-align: center;
   }
@@ -86,3 +86,7 @@ body{
   a:hover{
     color: blue;
   }
+.tet{
+  text-align: center;
+  padding-top: 40px;
+}
