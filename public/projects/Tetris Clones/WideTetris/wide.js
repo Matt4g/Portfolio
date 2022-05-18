@@ -1,9 +1,8 @@
 const canvas = document.getElementById('tetris');
 const context = canvas.getContext('2d');
-const canvas2 = document.getElementById('Next')
-const context2 = canvas2.getContext('2d')
+
 context.scale(20, 20);
-context2.scale(20, 20);
+
 
 function arenaSweep() {
     let rowCount = 1;
@@ -46,13 +45,7 @@ function createMatrix(w, h) {
     return matrix
 }
 
-function createMatrix2(w, h) {
-    const matrix2 = [];
-    while (h--) {
-        matrix2.push(new Array(w).fill(0));
-    }
-    return matrix
-}
+
 
 function createPiece(type) {
     if (type === 'T') {
@@ -132,8 +125,6 @@ function draw() {
     context.fillStyle = '#000';
     context.fillRect(0, 0, canvas.width, canvas.height);
 
-    context2.fillStyle = '#000';
-    context2.fillRect(0, 0, canvas2.width, canvas2.height);
 
     drawMatrix(arena, {x: 0, y: 0});
     drawMatrix(player.matrix, player.pos);
@@ -208,10 +199,7 @@ player.matrix = createPiece(pieces[pieces.length * Math.random() | 0]);
         updateScore();
     }
 }
-function NextBox() {
-createPiece(pieces[1])
-    context2.fillStyle = colors[value];
-}
+
 
 function playerRotate(dir) {
     const pos = player.pos.x;
@@ -305,7 +293,6 @@ const colors = [
 ];
 
 const arena = createMatrix(12, 20);
-const arena2 = createMatrix(4, 4);
 
 const player = {
     pos: {x: 0, y: 0},
