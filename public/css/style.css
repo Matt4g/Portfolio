@@ -101,3 +101,14 @@ body {
     height: 500;
     padding-bottom: 80px; 
 }
+#eu{
+  display: block;
+  clear: both;
+  margin-top: 25px;
+  float: right;
+  height: auto;
+  width: 400px;
+  height: 690px;
+  border-radius: 25px;
+  object-fit: cover;
+}
