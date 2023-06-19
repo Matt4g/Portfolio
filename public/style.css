@@ -68,7 +68,7 @@ body {
     float: right;
     margin-top: 25px;
     height: auto;
-    width: 400px;
+    width: 29%;
     border-radius: 25px;
   }
 
@@ -108,7 +108,7 @@ body {
   margin-top: 25px;
   float: right;
   height: auto;
-  width: 400px;
+  width: 29%;
   height: 690px;
   border-radius: 25px;
   object-fit: cover;
